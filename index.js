@@ -216,10 +216,12 @@ function switchPlaylist(playlistNum){
 
 // populate playlist content table
 function populatePlayListContentTable(){
+  // sets playlist name to loading... until sheets are successfully grabbed
+  document.getElementById("playlistContent").innerHTML = "Loading...";
 
   // calls getAllSheetsValues()) which is in Code.js, stores array of sheets (Nx5 matrices) in sheets
 //   google.script.run.withSuccessHandler(function(sheets){
-// var sheets = getRows()
+
 // sheets is returned from getRows, then waits for it to become fulfilled, then runs the stuff inside curly brackets
 getRows().then((sheets) => {
 
